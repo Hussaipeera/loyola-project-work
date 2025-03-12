@@ -19,3 +19,4 @@ function updateSliderPosition() {
     const newTransformValue = -currentSlide * 100;  // Slide by 100% of the container width
     document.querySelector('.slider-images').style.transform = `translateX(${newTransformValue}%)`;
 }
+
