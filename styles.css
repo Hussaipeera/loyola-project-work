@@ -1,0 +1,391 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+    color: rgb(0, 0, 0);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  header .logo {
+    font-size: 24px;
+    animation: slideIn 0.4s ease-in;
+  }
+  
+  header nav ul {
+    display: flex;
+    gap: 20px;
+  }
+  
+  header nav ul li {
+    list-style: none;
+  }
+  
+  header nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  header nav ul li a:hover {
+    color: #ff6347;
+  }
+  
+  .hero {
+    height: 100vh;
+    background: url('https://via.placeholder.com/1500x800') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    animation: fadeIn 2s ease-out;
+  }
+  
+  .hero-text h1 {
+    font-size: 3rem;
+    animation: slideIn 1.4s ease-out;
+    color: #333;
+  }
+  
+  .hero-text p {
+    font-size: 1.5rem;
+    animation: fadeInUp 2s ease-out;
+    color: skyblue;
+  }
+  
+  .section-about, .section-contact {
+    padding: 80px 20px;
+    text-align: center;
+    animation: fadeInUp 2s ease-out;
+  }
+  
+  #contact-form input {
+    margin: 10px 0;
+    padding: 10px;
+    width: 80%;
+    font-size: 16px;
+  }
+  
+  #contact-form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+  }
+  
+  #contact-form button:hover {
+    background-color: #ff6347;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    animation: slideOut 0.3s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @keyframes slideIn {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+  }
+  
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+ .hero h1 {
+    font-family: 'Georgia', serif;    
+    font-size: 70px;                
+    font-weight: bold;                
+    font-family: 'Comic Sans MS', cursive, sans-serif;              
+    color: #ffffff;  
+    text-align: left;                 
+  }
+  marquee{
+    color:rgb(0, 0, 0);
+    font-style:normal;
+  }
+  
+
+/* Main Layout */
+.main-hero {
+  display: grid;  /* Use grid layout */
+  grid-template-columns: 1fr 2fr;  /* .hero section takes 1/3 and .hero1 takes 2/3 */
+  gap: 20px;  /* Space between sections */
+  align-items: center;  /* Vertically align content in the center */
+}
+
+.hero {
+  /* background-color: #4CAF50;  Green background */
+  color: white;
+  padding: 50px;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 3em;
+}
+
+.hero-text p {
+  font-size: 1.5em;
+}
+
+/* Gallery Section */
+.hero1 {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Image Slider Container */
+.slider-container {
+  position: relative;
+  max-width: 100%;  /* Make the slider container take full width of the section */
+  margin: auto;
+  overflow: hidden; /* Hides images that are not visible */
+  
+}
+
+.slider-images {
+  display: flex;
+  transition: transform 0.5s ease;  /* Smooth sliding transition */
+  animation: slideShow 3s infinite;  /* Apply the animation to the image-slider */
+
+}
+
+.slider-images img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+ 
+
+/* Arrow Buttons */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 30px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.left {
+  left: 10px;
+}
+
+.right {
+  right: 10px;
+}
+
+
+footer{
+  position: relative;
+}
+
+.copy-text{
+  position:absolute;
+  left:0;
+}
+
+.link-text{
+  display: inline-block;
+  border-bottom: 2px solid #fff;
+  margin-bottom:5px;
+
+}
+
+footer{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+.follow-links{
+  display: flex;
+  justify-content: start;
+  margin: 8px;
+  padding: 8px;
+}
+.follow-icon{
+  display: flex;
+  /* justify-content: space-around; */
+  align-items: center;
+  margin-bottom:5px;
+}
+
+.bi{
+  margin-right:5px;
+}
+
+.follow-icon:hover{
+  color:lightblue;
+}
+
+.hero-text h1{
+  color: #f63c3c;
+}
+.hero-text img{
+  width:400px;
+  height: 320px;
+}
+
+.body{
+  background-color: #fff;
+}
+
+.hero1 h1{
+  color: #000000;
+  font-size: 70px;
+
+}
+
+.slider-images {
+  width: 940px;
+  min-height: 450px;
+
+}
+
+.slider-container {
+  inset-block-start: 100px;
+}
+.vision h3{
+  text-align: left;
+  color:#f63c3c;
+  font-size: 30px;
+  body {
+    font-family: 'Arial', 'Helvetica', sans-serif;
+  }
+  
+}
+
+.vision{
+  text-align: left;
+  font-size: 20px;
+  padding-left: 100px;
+  padding-right: 100px;
+  
+    font-family:'Courier New', Courier, monospace;
+  
+  
+}
+
+.link-text{
+  padding-right: 0%;
+}
+
+.usefull-1{
+display: inline-block;
+  border-bottom: 2px solid #fff;
+  margin-bottom:5px;
+}
+.history p{
+  padding-right: 1000px;
+  padding-left: 100px;
+  font-style: normal;
+  font-size: 20px;
+}
+.history h2{
+  padding-left: 100px;
+  font-size: 30px;
+  font-family: 'Lucida Console', monospace;
+}
+
+.history img{
+  padding-left: 100px;
+  margin-right: 20px;
+}
+
+.mar img{
+  width:30px;
+  height:30px;
+  
+}
+.follow-icon:hover{
+  color:lightblue;
+}
+
+
+
+.loc:hover{
+  color:lightblue
+}
+
+.main{
+  display: grid;
+  grid-template-columns: repeat(1fr, 2fr);
+  gap: 30px;
+  align-items: center;
+}
+
+.main1-1{
+  padding-left: 100px;
+}
+/* node Layout */
+.node {
+  display: grid;  /* Use grid layout */
+  grid-template-columns: 1fr 2fr;  /* .hero section takes 1/3 and .hero1 takes 2/3 */
+  gap: 20px;  /* Space between sections */
+  align-items: center;  /* Vertically align content in the center */
+}
+
+.main2-2 p{
+  font-size: 30px;
+  font-family: 'Lucida Console', monospace;
+}
+.main2 h1{
+color: #f63c3c;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-size: 40px;
+
+}
+
+.main1-1 h1{
+color: #f63c3c;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-size: 50px;
+
+}
+.main2{
+  padding-right: 100px;
+}
+.main2 img{
+  width:3oS0px;
+  height: 200px;
+}
+.copy-text{
+  padding-left: 50px;
+}
