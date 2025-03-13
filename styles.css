@@ -45,6 +45,8 @@
   
   header nav ul li a:hover {
     color: #ff6347;
+    border-bottom: 2px solid #f63c3c;
+    margin: 2px;
   }
   
   .hero {
