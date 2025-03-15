@@ -385,9 +385,17 @@ font-size: 50px;
   padding-right: 100px;
 }
 .main2 img{
-  width:3oS0px;
+  width:300px;
   height: 200px;
 }
 .copy-text{
   padding-left: 50px;
+}
+
+.color a{
+text-decoration: none;
+color:#f0f0f0;
+}
+.color a:hover{
+  color:lightblue
 }
